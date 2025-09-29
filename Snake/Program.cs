@@ -2,16 +2,15 @@
 
 Settings setting = new();
 
-string fliedSize = "small";
-string complexity = "easy";
+string fliedSize = "klein";
+string complexity = "einfach";
 
 while (true)
 {
     Console.Clear();
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("1 - Играть \n2 - Настройи \n3 - Выход\n");
+    Console.WriteLine("1 - Spielen \n2 - Einstellungen \n3 - Beenden\n");
     Console.ResetColor();
-
 
     if (int.TryParse(Console.ReadLine(), out int number) && number < 4)
     {
@@ -30,7 +29,7 @@ while (true)
             default:
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Вы введи не верную команду!!!\n\nНажмите любую клавишу, чтобы продолжить\n");
+                Console.WriteLine("Ungültiger Befehl!\n\nDrücken Sie eine beliebige Taste, um fortzufahren\n");
                 Console.ReadKey();
                 Console.ResetColor();
                 break;
@@ -39,7 +38,9 @@ while (true)
     else
     {
         Console.Clear();
-        Console.WriteLine("Введите число!");
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Bitte geben Sie eine Zahl ein!");
         Console.ReadKey();
+        Console.ResetColor();
     }
 }
